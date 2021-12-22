@@ -22,13 +22,17 @@ https://www.buymeacoffee.com/StolK
 
 3. start/restart you're server
 
--------------------------------------------------------------------------------------------------
+-----------------------------------------USAGE--------------------------------------------------
+
 In you're server give youreself the items above:
 5x Acetone
 2x Lithium
 1x Methlab
 
 And take place on the passengerside of the JOURNEY, then press E and enjoy 😉👍🏼
+
 -------------------------------------------------------------------------------------------------
+
+The orginal script is not mine i just made an edit for it to work qbcore an qb-menu
 
 With ❤ from StolK
