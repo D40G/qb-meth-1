@@ -17,8 +17,9 @@ Please consider supporting ❤
 ### Manual
 1. Place qb-meth in you're server recources folder and add it to the server config.cfg
 
-2. Add these lines to: qb-core/shared.lua
-#	-- Meth in the RV
+2. Add these lines to: qb-core/shared.lua under QBShared.Items
+
+-- Meth in the RV
 	["acetone"] 				 	 = {["name"] = "acetone", 			  			["label"] = "Acetone", 					["weight"] = 5000, 		["type"] = "item", 		["image"] = "acetone.png", 				["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "Stuff to cook!"},
 	["methlab"] 				 	 = {["name"] = "methlab", 			  			["label"] = "Lab", 						["weight"] = 15000, 	["type"] = "item", 		["image"] = "lab.png", 					["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "Stuff to cook!"},
 	["lithium"] 				 	 = {["name"] = "lithium", 			  			["label"] = "Lithium", 					["weight"] = 1000, 		["type"] = "item", 		["image"] = "lithium.png", 				["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "Stuff to cook!"},
