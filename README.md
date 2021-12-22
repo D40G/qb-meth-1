@@ -35,7 +35,7 @@ In you're server give youreself the items above:
 
 And take place on the passengerside of the JOURNEY, then press E and enjoy 😉👍🏼
 
-##disclaimer
+# Disclaimer
 The orginal script is not mine i just made an edit for it to work qbcore an qb-menu
 Use at your own risk
 
