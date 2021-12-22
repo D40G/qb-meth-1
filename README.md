@@ -2,12 +2,12 @@
 Mobile meth lab using the Journey RV
 
 🔴 Made for the qbcore Framework
-https://github.com/qbcore-framework / https://www.discord.gg/qbcore
+- [GitHub](https://github.com/qbcore-framework) / [DISCORD](https://www.discord.gg/qbcore)
 
 
 Thank you for intrest in my work.
 Please consider supporting ❤
-https://www.buymeacoffee.com/StolK
+- [buymeacoffee StolK](https://www.buymeacoffee.com/StolK)
 
 ## Dependencies
 - [qb-core](https://github.com/qbcore-framework/qb-core)
