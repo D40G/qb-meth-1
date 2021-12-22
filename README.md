@@ -28,7 +28,7 @@ Please consider supporting ❤
 3. start/restart you're server
 
 ## Usage
-In you're server give youreself the items above:
+In you're server give yourself the items above:
 5x Acetone
 2x Lithium
 1x Methlab
