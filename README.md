@@ -8,6 +8,7 @@ Mobile meth lab using the Journey RV
 Thank you for intrest in my work.
 Please consider supporting ❤
 - [Buymeacoffee StolK](https://www.buymeacoffee.com/StolK)
+- [PayPal me](https://www.paypal.com/paypalme/StolK88)
 
 ## Dependencies
 - [qb-core](https://github.com/qbcore-framework/qb-core)
