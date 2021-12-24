@@ -12,6 +12,7 @@ Please consider supporting ❤
 
 ## Dependencies
 - [qb-core](https://github.com/qbcore-framework/qb-core)
+- [qb-target](https://github.com/BerkieBb/qb-target)
 - [qb-inventory](https://github.com/qbcore-framework/qb-inventory)
 
 ## Installation
