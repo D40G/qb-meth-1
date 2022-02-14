@@ -1,7 +1,7 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
 DrawText3D = function(x, y, z, text)
-	SetTextScale(0.35, 0.35)
+    SetTextScale(0.35, 0.35)
     SetTextFont(4)
     SetTextProportional(1)
     SetTextColour(255, 255, 255, 215)
@@ -29,21 +29,15 @@ local Keys = {
 
 local started = false
 local progress = 0
-local CurrentVehicle 
 local pause = false
 local quality = 0
-local LastCar
 
 RegisterNetEvent('qb-methcar:stop')
 AddEventHandler('qb-methcar:stop', function()
+	LastVehicle = QBCore.Functions.GetClosestVehicle()
 	started = false
 	QBCore.Functions.Notify("Production stopped...", "error")
-	FreezeEntityPosition(LastCar, false)
-end)
-
-RegisterNetEvent('qb-methcar:stopfreeze')
-AddEventHandler('qb-methcar:stopfreeze', function(id)
-	FreezeEntityPosition(id, false)
+	FreezeEntityPosition(LastVehicle, false)
 end)
 
 RegisterNetEvent('qb-methcar:notify')
@@ -53,8 +47,9 @@ end)
 
 RegisterNetEvent('qb-methcar:startprod')
 AddEventHandler('qb-methcar:startprod', function()
+	CurrentVehicle = GetVehiclePedIsUsing(PlayerPedId(-1))
 	started = true
-	FreezeEntityPosition(CurrentVehicle,true)
+	FreezeEntityPosition(CurrentVehicle, true)
 	QBCore.Functions.Notify("Production started", "success")	
 	SetPedIntoVehicle((PlayerPedId()), CurrentVehicle, 3)
 	SetVehicleDoorOpen(CurrentVehicle, 2)
@@ -83,6 +78,7 @@ end)
 RegisterNetEvent('qb-methcar:boom', function()
 	playerPed = (PlayerPedId())
 	local pos = GetEntityCoords((PlayerPedId()))
+	LastVehicle = QBCore.Functions.GetClosestVehicle()
 	pause = false
 	Citizen.Wait(500)
 	started = false
@@ -90,7 +86,7 @@ RegisterNetEvent('qb-methcar:boom', function()
 	CurrentVehicle = GetVehiclePedIsUsing(PlayerPedId(-1))
 	TriggerServerEvent('qb-methcar:blow', pos.x, pos.y, pos.z)
 	TriggerEvent('qb-methcar:stop')
-	FreezeEntityPosition(LastCar,false)
+	FreezeEntityPosition(LastVehicle, false)
 end)
 
 RegisterNetEvent('qb-methcar:blowup')
@@ -577,7 +573,8 @@ Citizen.CreateThread(function(data)
 				QBCore.Functions.Notify("Done!!", "success")
 				TriggerServerEvent('qb-methcar:finish', quality)
 				SetPedPropIndex(playerPed, 1, 0, 0, true)
-				FreezeEntityPosition(LastCar, false)
+				LastVehicle = QBCore.Functions.GetClosestVehicle()
+				FreezeEntityPosition(LastVehicle, false)
 			end				
 		end		
 	end
@@ -589,9 +586,11 @@ Citizen.CreateThread(function()
 			if IsPedInAnyVehicle((PlayerPedId())) then
 			else
 				if started then
+					CurrentVehicle = GetVehiclePedIsUsing(PlayerPedId(-1))
 					started = false
 					TriggerEvent('qb-methcar:stop')
-					FreezeEntityPosition(LastCar,false)
+					SetPedPropIndex(playerPed, 1, 0, 0, true)
+					FreezeEntityPosition(CurrentVehicle, false)
 				end		
 			end
 	end
