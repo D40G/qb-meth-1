@@ -20,16 +20,6 @@ AddEventHandler('qb-methcar:start', function()
 	end	
 end)
 
-RegisterServerEvent('qb-methcar:stopf')
-AddEventHandler('qb-methcar:stopf', function(id)
-local _source = source
-	local xPlayers = QBCore.Functions.GetPlayers()
-	local xPlayer = QBCore.Functions.GetPlayer(tonumber(source))
-	for i=1, #xPlayers, 1 do
-		TriggerClientEvent('qb-methcar:stopfreeze', xPlayers[i], id)
-	end	
-end)
-
 RegisterServerEvent('qb-methcar:make')
 AddEventHandler('qb-methcar:make', function(posx,posy,posz)
 	local _source = source
